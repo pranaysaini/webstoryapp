@@ -11,7 +11,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
 
   // Updated handleSubmit function to take 'event' as a parameter
   const handleSubmit = async (name, password) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+    //event.preventDefault(); // Prevent the default form submission behavior
     console.log(name);
     console.log(password);
 
