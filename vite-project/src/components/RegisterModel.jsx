@@ -10,8 +10,8 @@ const RegisterModal = ({ isOpen, onClose }) => {
   const [password, setPassword] = useState("");
 
   // Updated handleSubmit function to take 'event' as a parameter
-  const handleSubmit = async (name, password) => {
-    //event.preventDefault(); // Prevent the default form submission behavior
+  const handleSubmit = async (event) => {
+    e.preventDefault(); // Prevent the default form submission behavior
     console.log(name);
     console.log(password);
 
@@ -39,8 +39,8 @@ const RegisterModal = ({ isOpen, onClose }) => {
           alt="Description of the image"
         />
         <h2>Register</h2>
-        <form>
-          {" "}
+        <form onSubmit={(e) => handleSubmit(e)}>
+          
           {/* Updated form to use onSubmit */}
           <div className="email-container">
             <label className="email">Username:</label>
@@ -63,7 +63,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
           <button
             className="register"
             type="submit"
-            onClick={() => handleSubmit(name, password)}
+            
           >
             Register
           </button>
